@@ -1,0 +1,58 @@
+/* center the big box */
+.experience_container{
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* the ONE card */
+  .experience__main{
+    background: var(--color-bg-variant);
+    padding: 2.4rem 5rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    width: min(900px, 92vw);
+    text-align: center;
+
+  }
+  
+  .experience__main:hover{
+    background: transparent;
+    border-color: var(--color-primary-variant);
+  }
+  
+  /* two columns inside the one card */
+  .experience__twoCols{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  
+.experience__details{
+    margin-top: 25px;
+ 
+  }
+  
+@media screen and (max-width: 1024px){
+  .experience__container{
+    grid-template-columns: 1fr;
+  }
+  .experience_container >div{
+    width: 80%;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+  .experience_content{
+    padding: 1rem;  }
+}
+
+@media screen and (max-width: 600px){
+  .experience_container{
+    gap: 1rem;
+  }
+  .experience_container >div{
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+}

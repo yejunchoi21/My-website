@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+:root{
+  --color-bg: #0b1020;
+  --color-bg-variant: #121a33;
+
+  --color-primary: #4f8cff; /* muted blue */
+  --color-primary-variant: rgba(79,140,255,0.22);
+
+  --color-white: #f5f7ff;
+  --color-light: rgba(245,247,255,0.65);
+
+  --transition: all 300ms ease;
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-ms: 90%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-white);
+  line-height: 1.7;
+  background-image: url('./assets/bg-texture.png');
+  background-size: repeat;
+  background-position: 280px;
+}
+
+/* ======================== GENERAL STYLES ======================== */
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 750;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+section {
+  padding: 8rem 0;   /* space inside section */
+  margin-top: 0;     /* remove extra gaps */
+  height: auto;      /* let content decide height */
+  min-height: 100vh; /* optional: keep full-screen feel */
+}
+
+section > h2, section > h5 {
+  text-align: center;
+  color: var(--color-light);
+}
+
+section > h2 {
+  color: var(--color-primary);
+  margin-bottom: 3rem;
+}
+
+.text-light {
+  color: var(--color-light);
+}
+
+a{
+  color: var(--color-primary);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--color-white);
+}
+
+.btn {
+  width: max-content;
+  display: inline-block;
+  color: var(--color-primary);
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1px solid var(--color-primary);
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background: var(--color-white);
+  color: var(--color-bg);
+  border-color: transparent;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ======================== MEDIA QUERIES (MEDIUM DEVICES) ======================== */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+}
+section > h2 {
+  margin-bottom: 2rem;
+} 
+
